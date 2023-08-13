@@ -5,6 +5,7 @@ import Image from "next/image";
 import Landing from "../../public/landing.png";
 import Community from "../../public/community.png";
 import ButtonOutline from "./shared/ButtonOutline";
+import CommunityMobile from "../../public/community_mobile.png";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -34,9 +35,14 @@ const Hero = () => {
         <p className="mx-auto max-w-6xl text-center font-sfpro text-xl md:text-3xl font-bold leading-extra-large text-charcoal-default">
           {t("made_for_community")}
         </p>
-        <Image
+       <Image
           src={Community}
-          className="mx-auto h-auto w-auto text-center"
+          className="mx-auto h-auto w-auto text-center hidden md:block lg:block"
+          alt="No Img"
+        />
+         <Image
+          src={CommunityMobile}
+          className="  text-center mb-120 md:hidden lg:hidden sm:block "  style={{paddingBottom:'120px'}}
           alt="No Img"
         />
       </div>
